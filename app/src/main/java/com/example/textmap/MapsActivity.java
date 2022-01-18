@@ -4,12 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -23,36 +30,65 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Button btn1 = (Button) findViewById(R.id.button);
+        Button btn2 = (Button) findViewById(R.id.btn_cafe);
+        Button btn3 = (Button) findViewById(R.id.button3);
+
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                gogoMap(37.566351, 126.946914,"이화여대"); // 이화여대
+
+            }
+        });
+
+
+
+        btn2.setOnClickListener(new OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                gogoMap(37.509113, 126.891679,"신도림역"); // 신도림역
+                gogoMap(37.50473994930677,  126.93529864186772,"댕과댕빵"); // 댕과댕빵
+
+            }
+
+        });
+
+
+        btn3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gogoMap(37.554768, 126.970707,"서울역"); // 서울역
+
+            }
+
+        });
+
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+    public void gogoMap(double latitude, double longitude,String title) {
+
+        LatLng place= new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(place).title(title));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place,14));
+
+
+    }
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        //LatLng SEOUL = new LatLng(37.56, 126.97);
+        if(mMap!= null){
+            //지도 확대 축소 버튼 생성
+            mMap.getUiSettings().setZoomControlsEnabled(true);
 
-       // MarkerOptions markerOptions = new MarkerOptions();
-        //markerOptions.position(SEOUL);
-        //markerOptions.title("서울");
-        //markerOptions.snippet("한국의 수도");
-        //mMap.addMarker(markerOptions);
+        }
 
-
-
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL,10));
-
-        LatLng cafe= new LatLng(37.55022317323927, 126.93529864186772);
+        /*LatLng cafe= new LatLng(37.55022317323927, 126.93529864186772);
         mMap.addMarker(new MarkerOptions().position(cafe).title("댕과댕빵"));
 
 
@@ -60,6 +96,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(cafe).title("귀여운주인"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(cafe));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cafe,14));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cafe,14));*/
     }
 }
