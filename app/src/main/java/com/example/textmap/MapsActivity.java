@@ -42,10 +42,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             public void onClick(View v) {
                 mMap.clear();
-                gogoMap(37.566351, 126.946914,"이화여대"); // 이화여대
-                gogoMap(37.52572038303644, 127.03692141294415,"꽁티드"); // 이화여대
-                gogoMap(37.509553793374224, 127.1284000534277,"파리"); // 이화여대
-                gogoMap(37.554290421544785, 126.97662734107982,"모둘러"); // 이화여대
+                gogoMap(37.566351, 126.946914,"이화여대","여긴 이화여대입니다. 어디에 위치해있고 아ㅏ아아"); // 이화여대
+                gogoMap(37.52572038303644, 127.03692141294415,"꽁티드","여긴 이화여대"); // 이화여대
+                gogoMap(37.509553793374224, 127.1284000534277,"파리","여긴 이화여대"); // 이화여대
+                gogoMap(37.554290421544785, 126.97662734107982,"모둘러","여긴 이화여대"); // 이화여대
 
             }
         });
@@ -55,9 +55,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 mMap.clear();
-                gogoMap(37.509113, 126.891679,"신도림역"); // 신도림역
-                gogoMap(37.540195548001826, 127.00294391534037,"올드패리"); // 댕과댕빵
-                gogoMap(37.50473994930677, 126.8768549111792,"귀여운주인"); // 댕과댕빵
+                gogoMap(37.509113, 126.891679,"신도림역","여긴 이화여대"); // 신도림역
+                gogoMap(37.540195548001826, 127.00294391534037,"올드패리","여긴 이화여대"); // 댕과댕빵
+                gogoMap(37.50473994930677, 126.8768549111792,"귀여운주인","여긴 이화여대"); // 댕과댕빵
 
             }
         });
@@ -67,19 +67,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 mMap.clear();
-                gogoMap(37.554768, 126.970707,"서울역"); // 서울역
-                gogoMap(37.53094698582751, 126.97164334048144,"피자");// 서울역
-                gogoMap(37.54960973871412, 126.92158872698859,"식당"); // 서울역
+                gogoMap(37.554768, 126.970707,"서울역","여긴 이화여대"); // 서울역
+                gogoMap(37.53094698582751, 126.97164334048144,"피자","여긴 이화여대");// 서울역
+                gogoMap(37.54960973871412, 126.92158872698859,"식당","여긴 이화여대"); // 서울역
 
             }
         });
     }
 
-    public void gogoMap(double latitude, double longitude,String title) {
+    public void gogoMap(double latitude, double longitude,String title,String info) {
 
         LatLng place= new LatLng(latitude, longitude);
 
-        mMap.addMarker(new MarkerOptions().position(place).title(title));
+        mMap.addMarker(new MarkerOptions().position(place).title(title).snippet(info));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place,14));
 
     }
