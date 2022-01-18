@@ -39,16 +39,27 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng SEOUL = new LatLng(37.56, 126.97);
+        //LatLng SEOUL = new LatLng(37.56, 126.97);
 
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
-        mMap.addMarker(markerOptions);
+       // MarkerOptions markerOptions = new MarkerOptions();
+        //markerOptions.position(SEOUL);
+        //markerOptions.title("서울");
+        //markerOptions.snippet("한국의 수도");
+        //mMap.addMarker(markerOptions);
+
+
 
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL,10));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL,10));
 
+        LatLng cafe= new LatLng(37.55022317323927, 126.93529864186772);
+        mMap.addMarker(new MarkerOptions().position(cafe).title("댕과댕빵"));
+
+
+        cafe = new LatLng(37.50473994930677, 126.8768549111792);
+        mMap.addMarker(new MarkerOptions().position(cafe).title("귀여운주인"));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(cafe));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cafe,14));
     }
 }
