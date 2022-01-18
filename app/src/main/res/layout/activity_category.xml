@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+    <Button
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="카테고리" />
+
+    <Button
+        android:id="@+id/profileSet"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="프로필 설정" />
+
+    <Button
+        android:id="@+id/community"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="커뮤니티" />
+
+    </LinearLayout>
+</LinearLayout>
