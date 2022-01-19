@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class SecondProfileActivity extends AppCompatActivity implements View.OnClickListener {
@@ -44,7 +46,17 @@ public class SecondProfileActivity extends AppCompatActivity implements View.OnC
         mMessageTextView.setText(size);
 
 
-        findViewById(R.id.result_button).setOnClickListener(this);
+//        findViewById(R.id.result_button).setOnClickListener(this);
+
+        //프로필 설정 버튼 눌렀을때
+        ImageButton goButton=(ImageButton)findViewById(R.id.result_button);
+        goButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),CategoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

@@ -28,6 +28,42 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton moveButton2=(ImageButton) findViewById(R.id.btn_cafe);
+        moveButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton moveButton3=(ImageButton) findViewById(R.id.button3);
+        moveButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton moveButton4=(ImageButton) findViewById(R.id.button5);
+        moveButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton moveButton5=(ImageButton) findViewById(R.id.button6);
+        moveButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
