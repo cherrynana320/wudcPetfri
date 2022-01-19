@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -87,9 +88,11 @@ public class ProfileSettingActivity extends AppCompatActivity implements View.On
     protected void OnActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
         //갤러리
-        if (requestCode == Get_GALLERY_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+        if (requestCode == Get_GALLERY_IMAGE && resultCode == RESULT_OK && data != null) {
+
             Uri selectedImageUri = data.getData();
             imageview.setImageURI(selectedImageUri);
+            Log.d("galary","실행되고잇니");
         }
 
         //입력받은 코드

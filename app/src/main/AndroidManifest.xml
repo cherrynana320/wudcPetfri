@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.textmap">
-
+    <!-- camera, gallery -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -17,12 +20,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TextMap">
+        <activity android:name=".communityActivity"></activity>
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-
-
         <activity android:name=".CategoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,11 +33,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-
         <activity android:name=".ProfileSettingActivity" />
-
         <activity android:name=".SecondProfileActivity" />
-
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
