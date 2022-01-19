@@ -42,7 +42,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         //다이어리 버튼 눌렀을때
         ImageButton moveButton3=(ImageButton)findViewById(R.id.community);
-        moveButton2.setOnClickListener(new View.OnClickListener() {
+        moveButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),communityActivity.class);
