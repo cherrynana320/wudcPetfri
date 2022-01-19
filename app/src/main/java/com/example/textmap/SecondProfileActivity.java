@@ -1,5 +1,6 @@
 package com.example.textmap;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,6 +18,10 @@ public class SecondProfileActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_profile);
+
+        //액션바 제거
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         Intent intent = getIntent();
 

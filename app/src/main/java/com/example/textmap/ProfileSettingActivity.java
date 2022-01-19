@@ -3,6 +3,7 @@ package com.example.textmap;
 
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -41,6 +42,10 @@ public class ProfileSettingActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_setting);
+
+        //액션바 제거
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         // 크기
         rg_size = findViewById(R.id.rg_size);
@@ -92,7 +97,7 @@ public class ProfileSettingActivity extends AppCompatActivity implements View.On
 
             Uri selectedImageUri = data.getData();
             imageview.setImageURI(selectedImageUri);
-            Log.d("galary","실행되고잇니");
+            Log.d("gallery","실행되고잇니");
         }
 
         //입력받은 코드

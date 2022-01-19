@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FEFBFB"
     tools:context=".MapsActivity" >
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="검색창"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:gravity="center"/>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -24,49 +17,61 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/shoppingmall_btn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="마트" />
+                android:layout_marginLeft="5dp"
+                android:background="#FEFBFB"
+                android:text="마트"
+                app:srcCompat="@drawable/map_shoppingmall_btn" />
 
-            <Button
-                android:id="@+id/btn_cafe"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="카페" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/cafe_btn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="식당" />
+                android:layout_marginLeft="5dp"
+                android:background="#FEFBFB"
+                android:text="카페"
+                app:srcCompat="@drawable/map_cafe_btn" />
 
-            <Button
+            <ImageButton
+                android:id="@+id/restaurant_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="#FEFBFB"
+                android:text="식당"
+                app:srcCompat="@drawable/map_restaurant_btn" />
+
+            <ImageButton
                 android:id="@+id/btn_hospital"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="미용실" />
+                android:layout_marginLeft="5dp"
+                android:background="#FEFBFB"
+                android:text="미용실"
+                app:srcCompat="@drawable/map_hairshop_btn" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="병원" />
-
-            <Button
+            <ImageButton
                 android:id="@+id/button6"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="호텔/숙소" />
+                android:layout_marginLeft="5dp"
+                android:background="#FEFBFB"
+                android:text="호텔/숙소"
+                app:srcCompat="@drawable/map_hotel_btn" />
 
         </LinearLayout>
 
     </HorizontalScrollView>
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/map"
         tools:context = ".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
 </LinearLayout>

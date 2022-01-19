@@ -1,5 +1,6 @@
 package com.example.textmap;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -28,14 +30,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        //액션바 제거
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        Button btn1 = (Button) findViewById(R.id.button);
-        Button btn2 = (Button) findViewById(R.id.btn_cafe);
-        Button btn3 = (Button) findViewById(R.id.button3);
+        ImageButton btn1 = (ImageButton) findViewById(R.id.shoppingmall_btn);
+        ImageButton btn2 = (ImageButton) findViewById(R.id.cafe_btn);
+        ImageButton btn3 = (ImageButton) findViewById(R.id.restaurant_btn);
 
         //마트,백화점
         btn1.setOnClickListener(new OnClickListener() {
@@ -44,7 +51,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 mMap.clear();
                 gogoMap(37.52517554772086, 126.92554976870474
-                        ,"IFC 몰","여긴 이화여대입니다. 어디에 위치해있고 아ㅏ아아");
+                        ,"IFC몰","여긴 이화여대입니다. 어디에 위치해있고 아ㅏ아아");
                 gogoMap(37.56646325511798, 126.91995248411027
                         ,"곰팡이마트","여긴 이화여대");
                 gogoMap(37.52612169078573, 126.92847499815257,"더현대서울","여긴 이화여대");

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.textmap">
     <!-- camera, gallery -->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -11,7 +12,8 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
 
     <application
         android:allowBackup="true"
@@ -20,21 +22,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TextMap">
-        <activity android:name=".communityActivity"></activity>
+
+        <activity android:name=".Intro1" />
+        <activity android:name=".Intro2"/>
+        <activity android:name=".Intro3" />
+        <activity android:name=".CategoryActivity" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-        <activity android:name=".CategoryActivity">
+        <activity android:name=".MainLogo"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity" />
         <activity android:name=".ProfileSettingActivity" />
         <activity android:name=".SecondProfileActivity" />
+        <activity android:name=".communityActivity" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.

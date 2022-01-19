@@ -5,30 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/category_background_btn"
     tools:context=".CategoryActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
         android:gravity="center">
-    <Button
+
+    <ImageButton
         android:id="@+id/category"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="카테고리" />
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitCenter"
+        android:background="#FEFBFB"
+        app:srcCompat="@drawable/category_petfri_btn"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/profileSet"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="프로필 설정" />
-
-    <Button
-        android:id="@+id/community"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="커뮤니티" />
-
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="fitCenter"
+        android:background="#FEFBFB"
+        app:srcCompat="@drawable/category_profile_btn" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/community"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"
+        android:background="#FEFBFB"
+        app:srcCompat="@drawable/category_diary_btn" />
+
 </LinearLayout>

@@ -5,42 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FEFBFB"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center" >
 
-    <Button
+
+    <ImageButton
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="Market" />
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="#FEFBFB"
+        android:text="Market"
+        app:srcCompat="@drawable/main_shoppingmall_btn" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_cafe"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="Cafe" />
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="#FEFBFB"
+        android:text="Cafe"
+        app:srcCompat="@drawable/main_cafe_btn"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button3"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="HairShop" />
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="#FEFBFB"
+        android:text="Restaurant"
+        app:srcCompat="@drawable/main_restaurant_btn"/>
 
-    <Button
-        android:id="@+id/btn_hospital"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hospital" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button5"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="#FEFBFB"
+        android:text="Hair"
+        app:srcCompat="@drawable/main_hairshop_btn"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button6"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="#FEFBFB"
+        android:text="Hotel"
+        app:srcCompat="@drawable/main_hotel_btn"/>
+
+</LinearLayout>
+
 </LinearLayout>
