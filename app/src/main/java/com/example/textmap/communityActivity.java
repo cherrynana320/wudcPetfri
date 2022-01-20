@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class communityActivity extends AppCompatActivity implements  View.OnClickListener  {
 
@@ -31,7 +32,7 @@ public class communityActivity extends AppCompatActivity implements  View.OnClic
 
         //intent 로 전달
 
-        Button moveButton=(Button)findViewById(R.id.btn_save);
+        ImageButton moveButton=(ImageButton)findViewById(R.id.btn_save);
         moveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
